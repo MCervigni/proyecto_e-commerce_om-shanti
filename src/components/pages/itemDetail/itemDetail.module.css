@@ -1,0 +1,42 @@
+.itemDetail {
+  margin: 3rem 7rem;
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.titleItemDetail {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: Montserrat, sans-serif;
+}
+
+.cardItemDetail {
+  padding: 2rem;
+  background-color: #fff;
+  align-items: center;
+  text-align: start;
+}
+
+.imgItemDetail {
+  width: 400px;
+}
+
+.descriptionItemDetail {
+  font-size: 1.1rem;
+}
+
+.btnAdd {
+  margin: 0 10px;
+}
+
+.btnAddProduct {
+  margin-left: 10px;
+  background-color: #4b4d50;
+  color: #fff;
+}
+
+.btnAddProduct:hover {
+  background-color: #343a40;
+}
