@@ -1,0 +1,19 @@
+.btnAdd {
+    margin: 0 10px;
+font-size: 1rem;
+display: inline-block;
+  }
+  
+  .btnAddProduct {
+    margin-top: 1rem;
+    background-color: #4b4d50;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0.6rem 1.8rem;
+    font-size: 1rem;
+    border: none;
+  }
+  
+  .btnAddProduct:hover {
+    background-color: #343a40;
+  }

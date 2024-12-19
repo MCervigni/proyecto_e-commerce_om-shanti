@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../../../products";
+// import { products } from "../../../products";
 import styles from "./itemDetail.module.css";
-import ItemCount from "./itemCount";
+import Counter from "../../common/counter/Counter";
+import { db } from "../../../firebaseConfig";
+import { collection, doc, getDoc } from "firebase/firestore";
 
 const ItemDetail = () => {
   const { id } = useParams();
@@ -10,15 +12,19 @@ const ItemDetail = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    let productSelected = products.find((el) => el.id === +id);
-    setProduct(productSelected);
+    const productsCollection = collection(db, "products");
+    let refDoc = doc(productsCollection, id);
+    const getDocById = getDoc(refDoc);
+    getDocById.then((res) => setProduct({ ...res.data(), id: res.id }));
   }, [id]);
 
-  const onAdd = (quantity) => {
-    console.log(
-      `Has agregado ${quantity} unidades de "${product.title}" al carrito.`
-    );
-  };
+  // return (
+  //   <div>
+  //     <h2>{product.title}</h2>
+  //     <img src={product.img} alt={product.title} />
+  //     <Counter product={product} />
+  //   </div>
+  // );
 
   return (
     <div className={styles.itemDetail}>
@@ -37,7 +43,11 @@ const ItemDetail = () => {
             <p>
               <b>Precio: ${product.price?.toLocaleString()}</b>
             </p>
-            <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+
+            <p>
+              <b>Cantidad: </b>
+            </p>
+            <Counter product={product} />
           </div>
         </>
       )}

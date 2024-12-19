@@ -5,11 +5,11 @@ import CartWidget from "../../common/cartWidget/CartWidget";
 const NavBar = () => {
   return (
     <div className={styles.nav}>
-      <Link to="/" class={styles.logo}>
+      <Link to="/" className={styles.logo}>
         <img src="/img-logo-YT.png" alt="Logo Tienda Om Shanti" />
         <h1>Om Shanti</h1>
       </Link>
-      <ul>
+      <ul className={styles.navUl}>
         <li>
           <Link to="/category/mats">Mats</Link>
         </li>

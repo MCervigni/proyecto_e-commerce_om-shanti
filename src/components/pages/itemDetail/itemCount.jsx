@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* import { useState } from "react";
 import styles from "./itemDetail.module.css";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -28,4 +28,4 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   );
 };
 
-export default ItemCount;
+export default ItemCount; */

@@ -27,7 +27,7 @@
   font-size: 1.1rem;
 }
 
-.btnAdd {
+/* .btnAdd {
   margin: 0 10px;
 }
 
@@ -39,4 +39,8 @@
 
 .btnAddProduct:hover {
   background-color: #343a40;
+} */
+
+.quantityCounter{
+  display: flex;
 }

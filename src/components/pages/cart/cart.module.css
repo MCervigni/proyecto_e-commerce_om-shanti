@@ -1,0 +1,32 @@
+.cartConteiner {
+  display: flex;
+  justify-content: center;
+}
+
+.productCardCart {
+  display: flex;
+margin: 0.05rem;
+  border: 1px solid #4b4d50;
+  background-color: #fff;
+  width: 45%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.productImgCart {
+  width: 100px; /* Small size for cart display */
+  height: auto; /* Maintain aspect ratio */
+  
+}
+
+.productCardInfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight:500;
+  text-align: left;
+}
+
+.productCardInfo p {
+    margin: 0.7rem ;
+}

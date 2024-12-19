@@ -1,16 +1,14 @@
 export const products = [
+  // {
+  //   stock: 12,
+  //   title: "Mat Blue",
+  //   img: "https://i.ibb.co/2FjpfKp/Mat-Blue.png",
+  //   description:
+  //     "Mat de yoga de 4mm confeccionado en goma antideslizante, proporciona estabilidad al practicante de yoga en la tracción. Funciona como aislante térmico. Color: turquesa.",
+  //   price: 35000,
+  //   category: "mats",
+  // },
   {
-    id: 1,
-    stock: 12,
-    title: "Mat Blue",
-    img: "https://i.ibb.co/2FjpfKp/Mat-Blue.png",
-    description:
-      "Mat de yoga de 4mm confeccionado en goma antideslizante, proporciona estabilidad al practicante de yoga en la tracción. Funciona como aislante térmico. Color: turquesa.",
-    price: 35000,
-    category: "mats",
-  },
-  {
-    id: 2,
     stock: 9,
     title: "Mat Green",
     img: "https://i.ibb.co/jhTX5ND/Mat-Green.png",
@@ -20,7 +18,6 @@ export const products = [
     category: "mats",
   },
   {
-    id: 3,
     stock: 11,
     title: "Mat Purple",
     img: "https://i.ibb.co/809v6VW/Mat-Purple.png",
@@ -30,7 +27,6 @@ export const products = [
     category: "mats",
   },
   {
-    id: 4,
     stock: 6,
     title: "Mat Corcho",
     img: "https://i.ibb.co/yhB9BvV/Mat-Corcho.png",
@@ -40,7 +36,6 @@ export const products = [
     category: "mats",
   },
   {
-    id: 5,
     stock: 7,
     title: "Portamat Liso",
     img: "https://i.ibb.co/7nF4nvR/Portamat-Liso.png",
@@ -50,7 +45,6 @@ export const products = [
     category: "portamats",
   },
   {
-    id: 6,
     stock: 10,
     title: "Portamat Mandalas",
     img: "https://i.ibb.co/N6fdbX6/Portamat-Mandala.png",
@@ -60,7 +54,6 @@ export const products = [
     category: "portamats",
   },
   {
-    id: 7,
     stock: 5,
     title: "Bolster Pink",
     img: "https://i.ibb.co/7Rnqpmr/Bolster-Pink.png",
@@ -70,7 +63,6 @@ export const products = [
     category: "bolsters",
   },
   {
-    id: 8,
     stock: 3,
     title: "Bolster Grey",
     img: "https://i.ibb.co/xgRXYM1/Bolster-Grey.png",
@@ -80,7 +72,6 @@ export const products = [
     category: "bolsters",
   },
   {
-    id: 9,
     stock: 3,
     title: "Bolster Red",
     img: "https://i.ibb.co/gzL3JZF/Bolster-Red.png",
@@ -90,7 +81,6 @@ export const products = [
     category: "bolsters",
   },
   {
-    id: 10,
     stock: 12,
     title: "Bloque Madera",
     img: "https://i.ibb.co/yn3YPW6/Bloque-Madera.png",
@@ -100,7 +90,6 @@ export const products = [
     category: "bloques",
   },
   {
-    id: 11,
     stock: 9,
     title: "Bloque Goma Eva",
     img: "https://i.ibb.co/s2BqVQX/Bloque-Goma-Eva.png",
@@ -110,7 +99,6 @@ export const products = [
     category: "bloques",
   },
   {
-    id: 12,
     stock: 6,
     title: "Bloque Corcho",
     img: "https://i.ibb.co/3czBgzK/Bloque-Corcho.png",
@@ -120,7 +108,6 @@ export const products = [
     category: "bloques",
   },
   {
-    id: 13,
     stock: 8,
     title: "Cinto",
     img: "https://i.ibb.co/XXF3K2P/Cinto.png",
