@@ -1,55 +1,54 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import { products } from "../../../products";
-import styles from "./itemDetail.module.css";
-import Counter from "../../common/counter/Counter";
+import { getDoc, doc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
-import { collection, doc, getDoc } from "firebase/firestore";
+import Counter from "../../common/counter/Counter";
+import DotLoader from "react-spinners/DotLoader";
+import styles from "./itemDetail.module.css";
 
 const ItemDetail = () => {
   const { id } = useParams();
-
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const productsCollection = collection(db, "products");
-    let refDoc = doc(productsCollection, id);
-    const getDocById = getDoc(refDoc);
-    getDocById.then((res) => setProduct({ ...res.data(), id: res.id }));
+    const getDocById = getDoc(doc(db, "products", id));
+    getDocById.then((res) => {
+      setProduct({ ...res.data(), id: res.id });
+      setLoading(false);
+    });
   }, [id]);
-
-  // return (
-  //   <div>
-  //     <h2>{product.title}</h2>
-  //     <img src={product.img} alt={product.title} />
-  //     <Counter product={product} />
-  //   </div>
-  // );
 
   return (
     <div className={styles.itemDetail}>
-      {product && (
-        <>
-          <img
-            src={product.img}
-            alt={product.title}
-            className={styles.imgItemDetail}
-          />
-          <div className={styles.cardItemDetail}>
-            <h2 className={styles.titleItemDetail}>{product.title}</h2>
-            <p className={styles.descriptionItemDetail}>
-              {product.description}
-            </p>
-            <p>
-              <b>Precio: ${product.price?.toLocaleString()}</b>
-            </p>
+      {loading ? (
+        <div className={styles.loaderContainer}>
+          <DotLoader color="#206088" loading={loading} size={40} />
+        </div>
+      ) : (
+        product && (
+          <>
+            <img
+              src={product.img}
+              alt={product.title}
+              className={styles.imgItemDetail}
+            />
+            <div className={styles.cardItemDetail}>
+              <h2 className={styles.titleItemDetail}>{product.title}</h2>
+              <p className={styles.descriptionItemDetail}>
+                {product.description}
+              </p>
+              <p>
+                <b>Precio: ${product.price?.toLocaleString()}</b>
+              </p>
 
-            <p>
-              <b>Cantidad: </b>
-            </p>
-            <Counter product={product} />
-          </div>
-        </>
+              <p>
+                <b>Cantidad: </b>
+              </p>
+              <Counter product={product} />
+            </div>
+          </>
+        )
       )}
     </div>
   );

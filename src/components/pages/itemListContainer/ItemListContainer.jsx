@@ -1,4 +1,3 @@
-// import styles from "./itemList.module.css";
 import { useEffect } from "react";
 import { useState } from "react";
 //import { products } from "../../../products";
@@ -6,6 +5,8 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { db } from "../../../firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import { DotLoader } from "react-spinners";
+import styles from "./itemList.module.css";
 
 const ItemListContainer = () => {
   const [myProducts, setMyProducts] = useState([]);
@@ -33,13 +34,23 @@ const ItemListContainer = () => {
 
   return (
     <div>
+      {myProducts.length === 0 && (
+        <div className={styles.loaderContainer}>
+          <DotLoader
+            color="#206088"
+            cssOverride={{}}
+            loading
+            size={40}
+            speedMultiplier={1}
+          />
+        </div>
+      )}
       <ItemList myProducts={myProducts} />
     </div>
   );
 };
 
-
-  /* BOTON PARA AGREGAR LOS PRODUCTOS A FIRESTORE
+/* BOTON PARA AGREGAR LOS PRODUCTOS A FIRESTORE
       <button onClick={addProductsFirestore}>
         Agregar Productos a Firestore
       </button>
@@ -49,6 +60,5 @@ let productCollection = collection( db, "products")
   addDoc(productCollection,e)
  })
  }; */
-
 
 export default ItemListContainer;

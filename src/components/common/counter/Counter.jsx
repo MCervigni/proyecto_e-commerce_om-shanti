@@ -1,54 +1,66 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
+import { toast } from "react-hot-toast";
 import styles from "./counter.module.css";
 import { CartContext } from "../../../context/CartContext";
 
-/* const btnStyles = {
-  padding: "10px 40px",
-  backgroundColor: "steelblue",
-  fontSize: "1.5rem",
-  color: "white",
-  border: "none",
-  borderRadius: "8px",
-}; */
-// const divStyles = {
-//   display: "flex",
-//   alignItems: "center",
-//   justifyContent: "center",
-//   gap: "20px",
-// };
-const Counter = ({ product }) => {
-  const { addToCart } = useContext(CartContext);
-  const [count, setCount] = useState(1);
+const Counter = ({ product, initialQuantity = 1, showAddButton = true }) => {
+  const { addItem, cart } = useContext(CartContext);
+  const [count, setCount] = useState(initialQuantity);
+
+  useEffect(() => {
+    setCount(initialQuantity);
+  }, [initialQuantity]);
 
   const handleIncrement = () => {
     if (count < product.stock) {
       setCount(count + 1);
+      if (!showAddButton) {
+        addItem(product, 1);
+      }
+    } else {
+      toast.error("No hay suficiente stock disponible");
     }
   };
 
   const handleDecrement = () => {
     if (count > 1) {
       setCount(count - 1);
+      if (!showAddButton) {
+        addItem(product, -1);
+      }
     } else {
-      alert("minimo 1 ");
+      toast("Se debe agregar al menos 1 producto", { icon: "⚠️" });
     }
   };
 
   const onAdd = () => {
-    let productToCart = { ...product, quantity: count };
-    addToCart(productToCart);
+    const productInCart = cart.find((item) => item.id === product.id);
+    const totalQuantity = productInCart
+      ? productInCart.quantity + count
+      : count;
+
+    if (totalQuantity <= product.stock) {
+      addItem(product, count);
+      toast.success("Producto agregado al carrito");
+    } else {
+      toast.error("No hay suficiente stock disponible");
+    }
   };
 
   return (
-    <div>
-      <div>
+    <div className={styles.counterContainer}>
+      <div className={styles.counterControls}>
         <button onClick={handleDecrement}>-</button>
-        <span class={styles.btnAdd}>{count}</span>
+        <span>
+          <b> {count} </b>
+        </span>
         <button onClick={handleIncrement}>+</button>
       </div>
-      <button class={styles.btnAddProduct} onClick={onAdd}>
-        Agregar al carrito
-      </button>
+      {showAddButton && (
+        <button className={styles.addButton} onClick={onAdd}>
+          Agregar al carrito
+        </button>
+      )}
     </div>
   );
 };

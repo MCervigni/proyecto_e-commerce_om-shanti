@@ -1,19 +1,31 @@
-.btnAdd {
-    margin: 0 10px;
-font-size: 1rem;
-display: inline-block;
-  }
-  
-  .btnAddProduct {
-    margin-top: 1rem;
-    background-color: #4b4d50;
-    color: #fff;
-    border-radius: 4px;
-    padding: 0.6rem 1.8rem;
-    font-size: 1rem;
-    border: none;
-  }
-  
-  .btnAddProduct:hover {
-    background-color: #343a40;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
+
+.addButton {
+  margin-top: 1rem;
+  background-color: #206088;
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.6rem 1.8rem;
+  font-size: 1rem;
+  border: none;
+  font-family: Montserrat, sans-serif;
+}
+
+.addButton:hover {
+  background-color: #15415c;
+}
+
+.counterControls {
+  display: flex;
+  align-items: center;
+}
+
+.counterControls button {
+  font-size: 0.9rem;
+  font-family: Montserrat, sans-serif;
+}
+
+.counterControls span {
+  margin: 0 10px;
+  font-size: 1rem;
+}

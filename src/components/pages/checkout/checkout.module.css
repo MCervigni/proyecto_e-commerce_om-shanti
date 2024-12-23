@@ -1,23 +1,97 @@
-.checkoutForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 100%;
+  color: gray;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-style: italic;
 }
 
-.checkoutForm input {
-    margin: 0.5rem;
-    width: 70vh;
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputField,
+.textareaField {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 400px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.buttonEnviar {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.buttonEnviar:hover {
+  background-color: #45a049;
+}
+
+.buttonCancelar {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.buttonCancelar:hover {
+  background-color: #d32f2f;
+}
+
+.returnLink {
+  display: inline-block;
+  margin: 4rem auto;
+  padding: 0.4rem 1rem;
+  background-color: #206088;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.returnLink:hover {
+  background-color: #15415c;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
     padding: 1rem;
-    border-radius: 4px;
-    border: 1px solid ;
-}
+    margin: 1rem;
+  }
 
-.checkoutForm button {
-    background-color: #4b4d50;
-    border: 1px solid black;
-    color: #fff;
-    border-radius: 4px;
-    margin: 2px;
-    padding: 8px;
+  .inputField,
+  .textareaField {
+    max-width: 100%;
+  }
+
+  .checkoutResponse {
+    margin: 0.2rem;
+  }
 }
