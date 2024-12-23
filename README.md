@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Om Shanti E-Commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://i.ibb.co/L0jsBj6/img-logo-YT.png)
 
-## Available Scripts
+Om Shanti es una plataforma de e-commerce para la compra de productos relacionados con el yoga, como mats, portamats, bolsters, bloques y cintos. Este proyecto está construido usando React y Firebase.
 
-In the project directory, you can run:
+## Tabla de contenidos:
 
-### `npm start`
+- [Características](#características)
+- [Demo](#demo)
+- [Instalación](#instalación)
+- [Usage](#usage)
+- [Environment Variables](#variables-de-entorno)
+- [Implementación](#implementacion)
+- [Uso](#uso)
+- [Tecnologías utilizadas](#tecnologias-utilizadas)
+- [Contacto](#contacto)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Características
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Página principal con listado de productos, barra de navegación para el filtrado por categorías e ícono del carrito indicando la cantidad de productos cargados al mismo.
+- Páginas de detalles de los productos y el botón correspondiente para agregarlo al carrito de compras.
+- Funcionalidad del carrito de compras.
+- Procesamiento de pedidos y generación de tickets de seguimiento.
+- Base de datos de los productos con stock actualizado en tiempo real con Firestore.
+- Base de datos con las órdenes de pedidos con la información de la compra en tiempo real con Firestore.
+- Diseño responsivo con enfoque Desktop First para dispositivos móviles y de tablets.
+- Notificaciones de Toast para los usuarios.
 
-### `npm test`
+## Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Se puede ver una demostración en vivo del proyecto [Aquí](https://proyecto-e-commerce-om-shanti.vercel.app/).
 
-### `npm run build`
+## Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pasos para tener una copia local en funcionamiento:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clonar el repositorio:
+   ```sh
+   git clone https://github.com/your-username/om-shanti-ecommerce.git
+   ```
+2. Navegar al directorio del proyecto:
+```
+cd om-shanti-ecommerce
+```
+3. Instalar las dependencias:
+```
+npm install
+```
+## Uso
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para iniciar el servidor de desarrollo, ejecute:
+```
+npm start
+```
+Para construir el proyecto para producción, ejecute:
+```
+npm run build
+```
+## Variables de entorno
 
-### `npm run eject`
+Cree un archivo .env en el directorio raíz y agregue las siguientes variables de entorno:
+```sh
+REACT_APP_FIREBASE_API_KEY=your-firebase-api-key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your-firebase-auth-domain
+REACT_APP_FIREBASE_PROJECT_ID=your-firebase-project-id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your-firebase-storage-bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-firebase-messaging-sender-id
+REACT_APP_FIREBASE_APP_ID=your-firebase-app-id
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Implementación
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para implementar el proyecto, puede utilizar Vercel o cualquier otro servicio de alojamiento de sitios estáticos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Implementación con Vercel
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Instalacr Vercel CLI:
+```
+npm install -g vercel
+```
 
-## Learn More
+2. Implementar el proyecto
+```
+vercel
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tecnologías utilizadas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- Firebase (Firestore, Authentication)
+- React Router
+- React Hot Toast
+- React Spinners
+- Axios
+- FontAwesome
 
-### Code Splitting
+## Contacto
+Marina Cervigni - marinacervigni.dev@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Link del proyecto](https://github.com/your-username/om-shanti-ecommerce)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
