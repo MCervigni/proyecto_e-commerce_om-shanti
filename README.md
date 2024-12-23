@@ -9,10 +9,9 @@ Om Shanti es una plataforma de e-commerce para la compra de productos relacionad
 - [Características](#características)
 - [Demo](#demo)
 - [Instalación](#instalación)
-- [Usage](#usage)
-- [Environment Variables](#variables-de-entorno)
-- [Implementación](#implementacion)
 - [Uso](#uso)
+- [Variables de entorno](#variables-de-entorno)
+- [Implementación](#implementacion)
 - [Tecnologías utilizadas](#tecnologias-utilizadas)
 - [Contacto](#contacto)
 
