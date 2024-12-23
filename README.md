@@ -1,7 +1,4 @@
-# Om Shanti E-Commerce
-
-![](https://i.ibb.co/L0jsBj6/img-logo-YT.png)
-
+# Om Shanti E-Commerce ![](https://i.ibb.co/L0jsBj6/img-logo-YT.png)
 Om Shanti es una plataforma de e-commerce para la compra de productos relacionados con el yoga, como mats, portamats, bolsters, bloques y cintos. Este proyecto está construido usando React y Firebase.
 
 ## Tabla de contenidos:
@@ -39,34 +36,34 @@ Pasos para tener una copia local en funcionamiento:
    git clone https://github.com/your-username/om-shanti-ecommerce.git
    ```
 2. Navegar al directorio del proyecto:
-```
-cd om-shanti-ecommerce
-```
+   ```
+   cd om-shanti-ecommerce
+   ```
 3. Instalar las dependencias:
-```
-npm install
-```
+   ```
+   npm install
+   ```
 ## Uso
 
 Para iniciar el servidor de desarrollo, ejecute:
-```
-npm start
-```
+   ```
+   npm start
+   ```
 Para construir el proyecto para producción, ejecute:
-```
-npm run build
-```
+   ```
+   npm run build
+   ```
 ## Variables de entorno
 
 Cree un archivo .env en el directorio raíz y agregue las siguientes variables de entorno:
-```sh
-REACT_APP_FIREBASE_API_KEY=your-firebase-api-key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your-firebase-auth-domain
-REACT_APP_FIREBASE_PROJECT_ID=your-firebase-project-id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your-firebase-storage-bucket
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-firebase-messaging-sender-id
-REACT_APP_FIREBASE_APP_ID=your-firebase-app-id
-```
+  ```sh
+  REACT_APP_FIREBASE_API_KEY=your-firebase-api-key
+  REACT_APP_FIREBASE_AUTH_DOMAIN=your-firebase-auth-domain
+  REACT_APP_FIREBASE_PROJECT_ID=your-firebase-project-id
+  REACT_APP_FIREBASE_STORAGE_BUCKET=your-firebase-storage-bucket
+  REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-firebase-messaging-sender-id
+  REACT_APP_FIREBASE_APP_ID=your-firebase-app-id
+  ```
 
 ## Implementación
 
@@ -75,14 +72,14 @@ Para implementar el proyecto, puede utilizar Vercel o cualquier otro servicio de
 ### Implementación con Vercel
 
 1. Instalacr Vercel CLI:
-```
-npm install -g vercel
-```
+   ```
+   npm install -g vercel
+   ```
 
 2. Implementar el proyecto
-```
-vercel
-```
+   ```
+   vercel
+   ```
 
 ## Tecnologías utilizadas
 
