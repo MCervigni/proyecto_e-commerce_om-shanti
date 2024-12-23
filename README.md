@@ -1,5 +1,6 @@
-# Om Shanti E-Commerce
 ![](https://i.ibb.co/L0jsBj6/img-logo-YT.png)
+# Om Shanti E-Commerce
+
 Om Shanti es una plataforma de e-commerce para la compra de productos relacionados con el yoga, como mats, portamats, bolsters, bloques y cintos. Este proyecto está construido usando React y Firebase.
 
 ## Tabla de contenidos:
