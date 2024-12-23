@@ -1,13 +1,13 @@
 export const products = [
-  // {
-  //   stock: 12,
-  //   title: "Mat Blue",
-  //   img: "https://i.ibb.co/2FjpfKp/Mat-Blue.png",
-  //   description:
-  //     "Mat de yoga de 4mm confeccionado en goma antideslizante, proporciona estabilidad al practicante de yoga en la tracción. Funciona como aislante térmico. Color: turquesa.",
-  //   price: 35000,
-  //   category: "mats",
-  // },
+  {
+    stock: 12,
+    title: "Mat Blue",
+    img: "https://i.ibb.co/2FjpfKp/Mat-Blue.png",
+    description:
+      "Mat de yoga de 4mm confeccionado en goma antideslizante, proporciona estabilidad al practicante de yoga en la tracción. Funciona como aislante térmico. Color: turquesa.",
+    price: 35000,
+    category: "mats",
+  },
   {
     stock: 9,
     title: "Mat Green",
